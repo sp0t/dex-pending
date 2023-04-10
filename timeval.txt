@@ -1,0 +1,14 @@
+event detect time: 0.1
+excuting threading time: 0.001
+
+gas:5Gwei
+time:4
+block number
+transaction1(mannual) = 27219602
+transaction2(code)    = 27219598
+
+gas:5Gwei
+time:4
+block number
+transaction1(mannual) = 27219722
+transaction2(code)    = 27219728
