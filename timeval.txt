@@ -12,3 +12,6 @@ time:4
 block number
 transaction1(mannual) = 27219722
 transaction2(code)    = 27219728
+
+code: 0.000000007543538767
+manu: 0.000000007543124857 
