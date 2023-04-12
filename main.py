@@ -20,8 +20,8 @@ def handle_event(event):
         transaction = w3.eth.get_transaction(transaction)
         to = transaction['to']
 
-        # if to == router:
-        # swapthread.startSwap(transaction)
+        if to == router:
+            swapthread.startSwap(transaction)
     except Exception as err:
         print(f'error: {err}')
 
