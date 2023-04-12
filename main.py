@@ -6,8 +6,8 @@ import json
 import time
 
 # w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/58e77623029c44f19e710581ef96915d", request_kwargs={'timeout': 60}))
-# w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/1f70e06dce7c42ac916e2236a34b89fc", request_kwargs={'timeout': 60}))
-w3 = Web3(Web3.WebsocketProvider("wss://bsc-mainnet.nodereal.io/ws/v1/58e77623029c44f19e710581ef96915d", websocket_timeout=10))
+w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/1f70e06dce7c42ac916e2236a34b89fc", request_kwargs={'timeout': 60}))
+# w3 = Web3(Web3.WebsocketProvider("wss://bsc-mainnet.nodereal.io/ws/v1/58e77623029c44f19e710581ef96915d", websocket_timeout=10))
 print(w3.is_connected())
 router = w3.to_checksum_address('0x10ED43C718714eb63d5aA57B78B54704E256024E')
 
