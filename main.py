@@ -1,5 +1,5 @@
 
-from web3.auto import Web3
+from web3 import Web3
 import swapthread
 import asyncio
 import json
@@ -7,7 +7,7 @@ import time
 
 # w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/58e77623029c44f19e710581ef96915d", request_kwargs={'timeout': 60}))
 w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/1f70e06dce7c42ac916e2236a34b89fc", request_kwargs={'timeout': 60}))
-# w3 = Web3(Web3.WebsocketProvider("wss://bsc-mainnet.nodereal.io/ws/v1/58e77623029c44f19e710581ef96915d", websocket_timeout=10))
+# w3 = Web3(Web3.WebsocketProvider('wss://bsc-mainnet.nodereal.io/ws/v1/1f70e06dce7c42ac916e2236a34b89fc', websocket_kwargs={'timeout': 120}))
 print(w3.is_connected())
 router = '0x10ED43C718714eb63d5aA57B78B54704E256024E'
 
@@ -19,7 +19,8 @@ def handle_event(event):
         to = transaction['to']
 
         if to == router:
-            swapthread.startSwap(transaction)
+            print(router)
+            # swapthread.startSwap(transaction)
     except Exception as err:
         print(f'error: {err}')
 
