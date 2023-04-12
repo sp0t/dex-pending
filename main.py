@@ -5,9 +5,9 @@ import asyncio
 import json
 import time
 
-# w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/58e77623029c44f19e710581ef96915d", request_kwargs={'timeout': 60}))
-w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/1f70e06dce7c42ac916e2236a34b89fc", request_kwargs={'timeout': 60}))
-# w3 = Web3(Web3.WebsocketProvider('wss://bsc-mainnet.nodereal.io/ws/v1/1f70e06dce7c42ac916e2236a34b89fc', websocket_kwargs={'timeout': 120}))
+w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/58e77623029c44f19e710581ef96915d", request_kwargs={'timeout': 60}))
+# w3 = Web3(Web3.HTTPProvider("https://bsc-mainnet.nodereal.io/v1/1f70e06dce7c42ac916e2236a34b89fc", request_kwargs={'timeout': 60}))
+# w3 = Web3(Web3.WebsocketProvider('wss://bsc-mainnet.nodereal.io/ws/v1/1f70e06dce7c42ac916e2236a34b89fc', websocket_kwargs={'timeout': 60}))
 print(w3.is_connected())
 router = '0x10ED43C718714eb63d5aA57B78B54704E256024E'
 
@@ -17,7 +17,7 @@ def handle_event(event):
         transaction = w3.to_json(event).strip('"')
         transaction = w3.eth.get_transaction(transaction)
         to = transaction['to']
-        time.sleep(1)
+        time.sleep(0.1)
 
         if to == router:
             print(router)
