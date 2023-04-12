@@ -18,7 +18,7 @@ def handle_event(event):
         print(transaction)
         transaction = w3.eth.get_transaction(transaction)
         to = transaction['to']
-        time.sleep(0.001)
+        time.sleep(0.002)
 
         # if to == router:
         #     print(router)
