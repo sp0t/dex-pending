@@ -14,13 +14,14 @@ router = '0x10ED43C718714eb63d5aA57B78B54704E256024E'
 
 def handle_event(event):
     try:
+        print(transaction)
         transaction = w3.to_json(event).strip('"')
         transaction = w3.eth.get_transaction(transaction)
         to = transaction['to']
-        time.sleep(0.1)
+        time.sleep(0.001)
 
-        if to == router:
-            print(router)
+        # if to == router:
+        #     print(router)
             # swapthread.startSwap(transaction)
     except Exception as err:
         print(f'error: {err}')
