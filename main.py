@@ -14,8 +14,8 @@ router = '0x10ED43C718714eb63d5aA57B78B54704E256024E'
 
 def handle_event(event):
     try:
-        print(transaction)
         transaction = w3.to_json(event).strip('"')
+        print(transaction)
         transaction = w3.eth.get_transaction(transaction)
         to = transaction['to']
         time.sleep(0.001)
